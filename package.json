@@ -1,0 +1,19 @@
+{
+  "name": "it-academy-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shoroh1/IT-academy-final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shoroh1/IT-academy-final/issues"
+  },
+  "homepage": "https://github.com/Shoroh1/IT-academy-final#readme"
+}
