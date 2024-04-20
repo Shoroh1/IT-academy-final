@@ -1,9 +1,8 @@
 exports.config = {
     runner: 'local',
     specs: [
-        './test/specs/**/*.js'
-    ],
-    exclude: [
+        './test/**/*.js',
+        './test/**/*.e2e.js'
     ],
     maxInstances: 10,
     capabilities: [{
@@ -23,17 +22,20 @@ exports.config = {
         }
     }],
 
+    // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'error',
     bail: 0,
-    waitforTimeout: 10000,
+    waitForTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     services: ['visual'],
     framework: 'mocha',
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
-
-    // Options to be passed to Mocha.
-    // See the full list at http://mochajs.org/
+    reporters: ['spec',
+        [
+            'allure',
+            { outputDir: 'allure-results' }
+        ]
+    ],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
@@ -183,22 +185,22 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {string} oldSessionId session ID of the old session
-    * @param {string} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {string} oldSessionId session ID of the old session
+     * @param {string} newSessionId session ID of the new session
+     */
     // onReload: function(oldSessionId, newSessionId) {
     // }
     /**
-    * Hook that gets executed before a WebdriverIO assertion happens.
-    * @param {object} params information about the assertion to be executed
-    */
+     * Hook that gets executed before a WebdriverIO assertion happens.
+     * @param {object} params information about the assertion to be executed
+     */
     // beforeAssertion: function(params) {
     // }
     /**
-    * Hook that gets executed after a WebdriverIO assertion happened.
-    * @param {object} params information about the assertion that was executed, including its results
-    */
+     * Hook that gets executed after a WebdriverIO assertion happened.
+     * @param {object} params information about the assertion that was executed, including its results
+     */
     // afterAssertion: function(params) {
     // }
 }
