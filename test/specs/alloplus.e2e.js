@@ -33,7 +33,7 @@ describe('alloplus.by e2e test', () => {
 
 })
 
-//этот кусок ещё пилится, так что не следует обращать на него внимания )
+//этот кусок ещё пилится, так что не следует обращать на него внимания)))
 
 // it('should open the catalog, add the product to the cart and check its availability there', async () => {
 //     await browser.url('https://alloplus.by/');
