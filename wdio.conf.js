@@ -33,7 +33,9 @@ exports.config = {
     reporters: ['spec',
         [
             'allure',
-            { outputDir: 'allure-results' }
+            { outputDir: 'allure-results',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: true,}
         ]
     ],
     mochaOpts: {
